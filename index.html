@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Unique URL Shortener</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>My URL Shortener</h1>
+        <nav>
+            <button id="auth-btn">Login</button>
+            <button id="dashboard-btn" style="display:none;">Dashboard</button>
+            <button id="logout-btn" style="display:none;">Logout</button>
+        </nav>
+    </header>
+
+    <main id="main-app">
+        <section id="auth-section">
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="password" id="password-input" placeholder="Enter password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+
+        <section id="shortener-section" style="display:none;">
+            <h2>Shorten a URL</h2>
+            <form id="shorten-form">
+                <input type="url" id="long-url-input" placeholder="Paste your long URL here" required>
+                <input type="text" id="custom-code-input" placeholder="Optional custom code">
+                <button type="submit">Shorten</button>
+            </form>
+            <div id="result-area"></div>
+        </section>
+
+        <section id="analytics-section" style="display:none;">
+            <h2>Analytics Dashboard</h2>
+            <div id="analytics-list"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My URL Shortener</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
